@@ -1,0 +1,25 @@
+{
+  "name": "EndavaInternshipAngularApplication",
+  "version": "1.0.0",
+  "description": "Endava Internship Angular Application",
+  "main": "index.html",
+  "dependencies": {
+    "angular": "^1.6.5",
+    "angular-animate": "^1.6.5",
+    "angular-aria": "^1.6.5",
+    "angular-bootstrap": "^0.12.2",
+    "angular-ui-bootstrap": "^2.5.0",
+    "angular-ui-router": "^1.0.3",
+    "bootstrap": "^3.3.7"
+  },
+  "devDependencies": {
+    "angular-cookies": "^1.6.5",
+    "angular-toastr": "^2.1.1",
+    "http-server": "^0.10.0"
+  },
+  "scripts": {
+    "start": "http-server -a localhost -p 9000"
+  },
+  "author": "Endava",
+  "license": "ISC"
+}

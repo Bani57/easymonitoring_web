@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/angular-toastr/dist/angular-toastr.min.css">
+    <script rel="stylesheet" href="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap.csp.css"></script>
+    <link rel="stylesheet" href="https://bootswatch.com/united/bootstrap.min.css">
+    <link rel="icon" href="https://agilefaq.files.wordpress.com/2016/08/paper_plane-512.png?w=640">
+    <!--JavaScript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="node_modules/angular-aria/angular-aria.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.js"></script>
+    <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+    <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    <script src="node_modules/angular-toastr/dist/angular-toastr.js"></script>
+    <script src="node_modules/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="node_modules/angular-cookies/angular-cookies.js"></script>
+
+    <!--general modules-->
+    <script src="app.js"></script>
+    <script src="app.state.js"></script>
+    <!-- controllers -->
+    <script src="app/modules/web/controller/mainController.js"></script>
+    <script src="app/modules/web/controller/homeController.js"></script>
+    <script src="app/modules/web/controller/aboutController.js"></script>
+    <script src="app/modules/web/controller/modalController.js"></script>
+    <!-- services -->
+    <script src="app/modules/web/service/APIservice.js"></script>
+    <script src="app/modules/web/service/helperService.js"></script>
+    <script src="app/modules/web/service/httpInterceptor.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+
+</head>
+
+<body>
+    <div id="container" ng-app="myApp">
+        <!-- ui-view includes the active state triggered on ui-sref -->
+        <div ui-view=""> </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<div>
+    <div>
+
+        <button class="btn btn-default pull-left" data-toggle="modal" data-target="#myModal" id="newScreen">
+                <span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Search&nbsp;
+        </button>
+        <button id="logout" class="btn btn-primary pull-right" ng-click="closeSession()">Logout</button>
+    </div>
+    <b><h4 class="text-left" style="color: dimgray; padding-top: 7%">{{successCode}}</h4></b>
+    <div style="padding-top: 2%;">
+        <h4 style="padding-bottom: 2%; border-bottom: solid dimgray 2px;">{{searchType}}</h4>
+    <table class="table" id="issueTable">
+
+        <thead class="thead-inverse">
+        <th class="col-sm-1 text-center">Type</th>
+        <th class="col-sm-1 text-center">Value</th>
+        </thead>
+
+        <tbody>
+        <tr ng-repeat="temp in arr">
+            <td> {{temp.name}}</td>
+            <td>{{temp.value}}</td>
+        </tr>
+        </tbody>
+
+    </table>
+    </div>
+
+</div>
+
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+    <div class="modal-dialog" style="position: fixed; top:17%; left: 15%; right: 15%; " role="document">
+        <div class="modal-content">
+
+            <div class="modal-header" style="background-color: rgb(233, 84, 32);">
+                <h4 style="color: azure">Search by project code</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <div class="form-group" style="padding-bottom: 10px;">
+                        <label style="padding-bottom: 20px; font-size: 20px;">Project Code:</label>
+                        <input type="text" class="form-control" ng-model="projectID" placeholder="Enter project code here" id="project">
+                    </div>
+                </form>
+
+                <div class="radio" style="padding-bottom:15px; padding-top: 15px; display: inline-block">
+                    <label style="padding-right: 75px;"><input type="radio" name="radio" ng-model="type" value="status" id="statusCheck" ng-checked="true">Search statuses&nbsp;&nbsp;</label>
+                </div>
+
+                <div class="radio" style="padding-bottom:15px; padding-top:15px;display: inline-block">
+                    <label><input type="radio" name="radio" ng-model="type" value="priority" id="priorityCheck">Search priorities</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="search" class="btn btn-sm btn-primary" data-dismiss="modal" ng-click="init();">Search</button>
+                <button id="cancel" class="btn btn-sm btn-default" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

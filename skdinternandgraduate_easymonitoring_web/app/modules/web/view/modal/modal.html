@@ -1,0 +1,23 @@
+<div class="modal-dialog">
+    <div class="modal-header">
+        <h4>Search by project ID</h4>
+    </div>
+    <div class="modal-body">
+        <form role="form">
+            <div class="form-group">
+                <label>Project ID:</label>
+                <input type="text" class="form-control" ng-model="projectID" placeholder="Enter project ID here">
+            </div>
+        </form>
+        <div class="radio">
+            <label><input type="radio" ng-model="type" value="status">Search statuses</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" ng-model="type" value="priority">Search priorities</label>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-sm btn-primary" ng-click="ok()">Search</button>
+        <button class="btn btn-sm btn-default" ng-click="cancel()">Cancel</button>
+    </div>
+</div>
